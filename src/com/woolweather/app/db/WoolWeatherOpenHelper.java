@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class WoolWeatherOpenHelper extends SQLiteOpenHelper {
 	/**
-	 * 创建province  省 表
+	 * 创建province 省 表
 	 */
 	public static final String CREATE_PROVINCE = "create table Province ("
 			+ "id integer primary key autoincrement," + //
@@ -19,16 +19,15 @@ public class WoolWeatherOpenHelper extends SQLiteOpenHelper {
 	public static final String CREATE_CITY = "create table City ("
 			+ "id integer primary key autoincrement," + //
 			"city_name text," + //
-			"city_code text," +
-			"province_id integer)"
-			;
+			"city_code text," + //
+			"province_id integer)";
 	/**
-	 * 创建  county 县表
+	 * 创建 county 县表
 	 */
 	public static final String CREATE_COUNTY = "create table County ("
 			+ "id integer primary key autoincrement," + //
 			"county_name text," + //
-			"county_code text," +
+			"county_code text," + //
 			"city_id integer)";
 
 	public WoolWeatherOpenHelper(Context context, String name,

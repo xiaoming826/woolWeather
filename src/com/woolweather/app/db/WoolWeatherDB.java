@@ -65,13 +65,13 @@ public class WoolWeatherDB {
 		List<Province> list = new ArrayList<Province>();
 		Cursor cursor = db
 				.query("Province", null, null, null, null, null, null);
-		while (cursor.moveToFirst()) {
+		if (cursor.moveToFirst()) {
 			do {
 				Province province = new Province();
 				province.setId(cursor.getInt(cursor.getColumnIndex("id")));
-				province.setId(cursor.getInt(cursor
+				province.setProvinceName(cursor.getString(cursor
 						.getColumnIndex("province_name")));
-				province.setId(cursor.getInt(cursor
+				province.setProvinceCode(cursor.getString(cursor
 						.getColumnIndex("province_code")));
 				list.add(province);
 			} while (cursor.moveToNext());
